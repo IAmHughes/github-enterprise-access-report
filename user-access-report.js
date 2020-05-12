@@ -73,13 +73,10 @@ async function getUserAccess () {
         hasNextPageOrg = getUserAccessResult.enterprise.organizations.pageInfo.hasNextPage
         const orgsObj = getUserAccessResult.enterprise.organizations.nodes
         let orgNode = 0
-        let repoNode = 0
 
         for (const org of orgsObj) {
           const reposObj = getUserAccessResult.enterprise.organizations.nodes[orgNode].repositories.nodes
           hasNextPageRepo = getUserAccessResult.enterprise.organizations.nodes[orgNode].repositories.pageInfo.hasNextPage
-          console.log(JSON.stringify(reposObj[repoNode]))
-          console.log(Object.keys(reposObj).length)
           if (Object.keys(reposObj).length > 0) {
             for (const repo of reposObj) {
               const orgName = org.login
@@ -93,7 +90,6 @@ async function getUserAccess () {
             } else {
               paginationRepo = null
             }
-            repoNode++
           }
           orgNode++
         }
