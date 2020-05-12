@@ -32,4 +32,4 @@ SomeOtherOrg,someRepo,maintain
 This script requires that the `GITHUB_TOKEN` provided have the scopes listed above, and the user creating the token needs to be an organization owner of **every** organization in the Enterprise to get a complete report.
   - If the `GITHUB_TOKEN` does not have `organization owner` access, the end report will not include the organization
 
-If this is ran on GitHub Enterprise Server, this will only report the Enterprise Owned repositories, not personal repositories.
+If this is ran on GitHub Enterprise Server, this will only report the Enterprise Owned repositories, not personal repositories. This includes that if the user is an outside collaborator on another user's personal repository, it will not be in the report.
