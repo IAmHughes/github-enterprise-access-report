@@ -16,7 +16,7 @@ It will return a `.csv` file with a report of *all repositories* the user has ac
 ## Report layout
 Once the script has run to completion, you will be presented with a report in the format:
 ```csv
-Organization,Repository,Level of Access
+Organization,Repository,AccessLevel
 org1,repo1,triage
 org1,repo2,read
 org2,repo1,write
